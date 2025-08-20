@@ -246,12 +246,13 @@ header a:hover {
 
 /* ==================== Sign In Page ==================== */
 .signin-page-box {
-    position: absolute;
-    top: 50%;               
+    position: fixed;
+    top: 60%;               
     left: 50%;              
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);  /* perfectly center it */
     width: 30%;
-    height: 60vh; 
+    height: 70vh; 
+    filter: blur(0.5px);
     z-index: 1000;          
 }
 
@@ -310,3 +311,34 @@ header a:hover {
     font-size: 20px;
     color: white;
 }
+
+.signin-page div{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signin-page div:hover {
+    opacity: 0.7;
+}
+
+
+/* ==================== Open Sign in Page ==================== */
+.openSignin{
+    animation: openSigninAnimation 0.7s forwards;
+}
+
+@keyframes openSigninAnimation {
+  from {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+

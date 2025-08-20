@@ -9,3 +9,11 @@ document.addEventListener("mousemove", (event) => {
   })
 });
 
+//  SIGN IN PAGE AND CLOSE ANIMATION
+const signinButton = document.getElementById("signinButton");
+const signinPage = document.getElementById("signinPage");
+const closeIcon = document.getElementById("closeIcon");
+
+signinButton.addEventListener("click", (){
+    signinPage.classList.add("openSignin")
+});
