@@ -1,0 +1,310 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(14, 12, 21);
+    font-family: monospace;
+    color: lightgray;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+header{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border: 0.5px solid rgba(110, 101, 114, 0.5);
+    z-index: 999;
+}
+.head-left{
+    display: flex;
+    align-items: center;
+}
+.head-left img{
+    margin-right: 15px;
+    height: 45px;
+}
+header ul{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header ul li{
+    list-style-type: none;
+}
+
+header a{
+    text-decoration: none;
+    color: gray;
+    font-weight: 900;
+    font-size: 15px;
+    transition: 0.35s;
+}
+header a:hover{
+    text-shadow: 0 0 15px rgb(253, 243, 243);
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+}
+.button-box{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin-left: 25px;
+    background: linear-gradient(to right, #00aaa7, #7f42a7, #6600c5, #1f2b9c, #2a46ff, #0099ff, #00aaa7);
+    border-radius: 10px;
+    background-size: 200% ;
+    animation: animationGradient 2.5s linear infinite;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 35%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 0);
+}
+
+@keyframes animationGradient {
+    to{
+        background-position: 400%;
+    }
+}
+
+.head-right button{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    border: none;
+    background-color: rgb(14, 12, 21);
+    color: grey;
+    border-radius: 10px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 35%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0 0);
+    cursor: pointer;
+}
+
+.head-right button:hover{
+   color: #7e00d2
+}
+
+.hero{
+    position: relative;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 150vh;
+  overflow: hidden;
+}
+
+.hero-blur-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -15%;
+}
+
+.hero-rings-image {
+  position: absolute;
+  height: 90%;
+  top: 90px;
+  opacity: 0.5;
+}
+
+.hero-icons-image{
+    width: 100%;
+    position: absolute;
+    top: 8%;
+}
+
+.hero h1{
+    position: absolute;
+    top: 10%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: white;
+    max-width: 1000px;
+    font-size: 50px;
+
+}
+
+.hero h2{
+    position: absolute;
+    top: 28%;
+    font-size: 20px;
+    max-width: 700px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color:  gray;
+
+}
+
+.hero button{
+    position: absolute;
+    top: 46%;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 140px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    clip-path: polygon(0 1%, 86% 0, 100% 37%, 100% 80%, 100% 99%, 0 100%, 0% 80%, 0% 20%);
+}
+
+.hero button:hover{
+    opacity: 0.7;
+    color: purple;
+}
+
+.hero-image-box {
+  margin: 290px auto 0 auto;
+  position: relative;   /* reference for absolute children */
+  width: 950px;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background: linear-gradient(to right, #00aaa7, #7f42a7, #6600c5, #1f2b9c, #2a46ff, #0099ff, #00aaa7);
+  background-size: 200%;
+  animation: animationGradient 2.5s linear infinite;
+  overflow: hidden;     /* so nothing leaks out */
+}
+ 
+.hero-image-box .robot-box {
+  width: 98.5%;
+  height: 98%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50px;
+}
+
+.hero-image-box .robot-box img{
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: hard-light;
+}
+
+.hero-image-box .robot-box .robot-header{
+    height: 30px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.hero-image-box .element1 {
+  position: absolute;
+  top: 25%;
+  right: -15%;
+  backdrop-filter: blur(10px);
+  width: 25%;
+  background: rgba(255, 255, 255, 0.05); /* optional background */
+}
+
+.hero-image-box .element1 img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.491);
+}
+
+
+
+
+
+
+.hero-image-box .element2 {
+  position: absolute;
+  top: 45%;
+  left: -15%;
+  backdrop-filter: blur(10px);
+  width: 25%;
+  border-radius: 15px;
+}
+
+.hero-image-box .element2 img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.491);
+}
+
+.parallex{
+    transition: transform 1s linear;
+}
+
+/* sign in Page */
+
+.signin-page-box {
+  position: absolute;     
+  top: 50%;               
+  left: 50%;              
+  transform: translate(-50%, -50%); /* true center */
+  width: 350px;           /* fixed width for stability */
+  height: auto;           /* let it grow naturally */
+  z-index: 1000;          
+}
+
+.signin-page {
+  width: 100%;
+  padding: 30px 20px;
+  background-color: rgba(14, 12, 21, 0.9);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.491);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.signin-page h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.signin-page input{
+    padding: 7.5px 30px;
+    background-color: lightgray;
+    border: none;
+    width: 60%;
+    outline: none;
+    height: 40px;
+    clip-path: polygon(20% 0%, 88% 1%, 100% 47%, 100% 60%, 89% 100%, 20% 100%, 0 100%, 0 0);
+    border-radius: 5px;
+    margin: 5%;
+}
+
+.signin-page button{
+    width: 50%;
+    height: 40px;
+    background-color: #7e00d2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+}
+
+.signin-page p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 40px;
+    background-color: gray; 
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+}
+
