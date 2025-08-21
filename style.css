@@ -177,7 +177,7 @@ header a:hover {
 .hero-image-box {
     margin-top: 290px;
     position: relative;
-    width: 1000px;
+    width: 800px;
     height: 550px;
     display: flex;
     align-items: center;
@@ -189,7 +189,7 @@ header a:hover {
 }
 
 .hero-image-box .robot-box {
-    width: 88.5%;
+    width: 90%;
     height: 98%;
     overflow: hidden;
     position: relative;
@@ -247,12 +247,11 @@ header a:hover {
 .signin-page-box {
     position: fixed;
     top: 60%;               
-    left: 50%;              
-    /* transform: translate(-50%, -50%);  perfectly center it */
+    left: 35%;
     width: 30%;
-    height: 60vh; 
+    height: 65vh; 
     filter: blur(0.5px);
-    /* z-index: 1000;   */
+    z-index: 1000;  
     opacity: 0;        
 }
 
@@ -332,13 +331,36 @@ header a:hover {
 }
 
 @keyframes openSigninAnimation {
-  from {
+to{
+    filter: blur(0);
+    opacity: 1;
+    top: 30%;
+}
+}
+  /* from {
     transform: translate(-50%, -50%) scale(0.8);
     opacity: 0;
   }
   to {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
-  }
+  } */
+
+  /*======= CLOSE SIGNIN PAGE ==========*/
+.closeSignin{
+    animation: closeSigninAnimation 0.7s forwards;
+}
+
+@keyframes closeSigninAnimation{
+    from{
+    filter: blur(0);
+    opacity: 1;
+    top: 30%;
+    }
+    to{
+        filter: blur(10px);
+        opacity: 0;
+        top: 60%;
+    }
 }
 
