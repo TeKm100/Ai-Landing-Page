@@ -453,6 +453,7 @@ h4{
   }
 
   .companies-list {
+    top: 90%;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
