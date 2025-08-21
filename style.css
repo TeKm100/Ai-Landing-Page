@@ -175,7 +175,7 @@ header a:hover {
 
 /* ==================== Hero Image Box ==================== */
 .hero-image-box {
-    margin: 290px auto 0 auto;
+    margin-top: 290px;
     position: relative;
     width: 1000px;
     height: 550px;
@@ -186,11 +186,10 @@ header a:hover {
     background: linear-gradient(to right, #00aaa7, #7f42a7, #6600c5, #1f2b9c, #2a46ff, #0099ff, #00aaa7);
     background-size: 200%;
     animation: animationGradient 2.5s linear infinite;
-    overflow: hidden;
 }
 
 .hero-image-box .robot-box {
-    width: 98.5%;
+    width: 88.5%;
     height: 98%;
     overflow: hidden;
     position: relative;
@@ -249,11 +248,12 @@ header a:hover {
     position: fixed;
     top: 60%;               
     left: 50%;              
-    transform: translate(-50%, -50%);  /* perfectly center it */
+    /* transform: translate(-50%, -50%);  perfectly center it */
     width: 30%;
-    height: 70vh; 
+    height: 60vh; 
     filter: blur(0.5px);
-    z-index: 1000;          
+    /* z-index: 1000;   */
+    opacity: 0;        
 }
 
 .signin-page {

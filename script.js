@@ -14,6 +14,7 @@ const signinButton = document.getElementById("signinButton");
 const signinPage = document.getElementById("signinPage");
 const closeIcon = document.getElementById("closeIcon");
 
-signinButton.addEventListener("click", (){
+signinButton.addEventListener("click", function(){
     signinPage.classList.add("openSignin")
 });
+
